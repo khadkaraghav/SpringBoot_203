@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" th:href="@{/style.css}" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Gurajada|Just+Another+Hand|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Song</title>
+</head>
+<body>
+
+<form th:action="@{/songform}" th:object="${song}" method="post">
+
+    Name : <input type="text" th:field="*{name}"/><br/>
+    Artist : <input type="text" th:field="*{artist}"/><br/>
+
+    Album : <input type="text" th:field="*{album}"/><br/>
+
+    Rating : <input type="number" th:field="*{rating}"/><br/>
+    Year : <input type="number" th:field="*{year}"/><br/>
+
+    <input type="submit" value="Submit"/>
+
+
+</form>
+
+</body>
+</html>
